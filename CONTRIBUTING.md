@@ -3,7 +3,7 @@
 ## Setup
 
 ```bash
-git clone https://github.com/your-username/focusguard
+git clone https://github.com/arjinexe/focusguard
 cd focusguard
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
