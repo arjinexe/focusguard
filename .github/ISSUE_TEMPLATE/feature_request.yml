@@ -1,0 +1,43 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      placeholder: "I'm always frustrated when..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature area
+      options:
+        - Detection (analysis engines)
+        - Resistance mechanisms
+        - Idle detection
+        - Pomodoro / session
+        - Gamification (XP / achievements)
+        - Statistics
+        - Settings / UI
+        - Autostart / tray
+        - i18n / new language
+        - CLI / headless mode
+        - Performance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered

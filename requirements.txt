@@ -1,0 +1,46 @@
+# FocusGuard — Runtime dependencies
+# Install: pip install -r requirements.txt
+#
+# ── Core (required) ──────────────────────────────────────────────────────────
+mss>=9.0.1
+Pillow>=10.0.0
+opencv-python>=4.9.0
+numpy>=1.24.0
+easyocr>=1.7.1
+pyautogui>=0.9.54
+screen-brightness-control>=0.23.0
+customtkinter>=5.2.2
+requests>=2.31.0
+platformdirs>=4.0.0
+
+# ── Optional: keyboard idle detection ────────────────────────────────────────
+# pynput>=1.7.6
+# Install: pip install pynput
+# Linux also needs: sudo usermod -aG input $USER
+
+# ── Optional: faster OCR (CUDA) ──────────────────────────────────────────────
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+# ── Optional: local AI vision (much better accuracy) ─────────────────────────
+# 1. Install Ollama: https://ollama.com
+# 2. ollama pull moondream2   ← 1.8 GB (replaces LLaVA 4.1 GB)
+# FocusGuard auto-detects Ollama on startup — no config needed.
+
+# ── Platform notes ────────────────────────────────────────────────────────────
+# macOS:   brew install python-tk
+#          pip install pyobjc-framework-Quartz   (brightness control)
+# Linux:   sudo apt install python3-tk scrot libxcb-xinerama0 libgl1
+#          sudo usermod -aG input $USER          (keyboard idle via pynput)
+# Windows: No extra steps needed
+
+# ── Optional extras ───────────────────────────────────────────────────────────────────
+# Optional: ambient sounds (white/pink/brown noise, rain, cafe, binaural beats)
+# pip install sounddevice
+# Linux also needs: sudo apt install libportaudio2
+
+# Optional: window tracker - macOS AppKit
+# pip install pyobjc-framework-AppKit   (macOS only)
+# Linux: sudo apt install xdotool
+
+# Optional: per-process CPU/memory tracking
+# pip install psutil
